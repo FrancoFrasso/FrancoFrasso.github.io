@@ -113,11 +113,9 @@ iframe{
     display: none;
 }
 video{
-  
-   
     margin-top:2vw;
     margin-bottom: 2vw;
-  
+    margin-right: 2vw;
     padding:5px;
     box-shadow: 3px 3px 10px #ccc;
     border-radius: 0.5% ;
@@ -416,8 +414,8 @@ a:visited {
     
     }
 
-     video{
-      
+      video{
+       display: grid;
         margin-top:2vw;
         margin-bottom: 2vw;
         width: 100%;
