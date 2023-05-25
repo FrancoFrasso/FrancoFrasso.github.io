@@ -174,22 +174,25 @@
 
       <form class="FORMULARIO01" id="formulario"  action="https://formspree.io/f/mbjeeayk" method="POST" onsubmit="guardarPersona(event)">
 
-            <label form="Ciudad">Nombre Completo</label>
-            <input class="controls" type="text" name="Nombres" id="nombre" placeholder="Ingrese su Nombre" required>
+            <label form="Ciudad">Nombre </label>
+            <input class="controls" type="text" name="Nombre" id="nombre" placeholder="Ingrese su Nombre" required>
+
+            <label form="Ciudad">Apellido</label>
+            <input class="controls" type="text" name="Apellido" id="apellido" placeholder="Ingrese su Apellido" required>
 
             <label form="Ciudad">Ciudad</label>
             <input class="controls" type="text" name="ciudad" id="ciudad" placeholder="Ingrese su Ciudad" required>
 
-            <label form="Email">Codigo Postal</label>
-            <div> <input class="controls" type="Codigo Postal"  id="cp" placeholder="CP" required>
+            <label form="CP">Codigo Postal</label>
+            <div> <input class="controls" type="text" name="Codigo Postal" id="cp" placeholder="CP" required>
 
             <label for="Email">Email</label>
 
-           <input class="controls" type="email" name="mail" id="mail" placeholder="Ingrese su E-Mail" required>
+           <input class="controls" type="text" name="mail" id="mail" placeholder="Ingrese su E-Mail" required>
 
               <label for="Provincia">Provincia</label>
 
-              <select class="controls" id="provincia" placeholder=" Seleccione la Provincia">
+              <select class="controls" name="Provincia" id="provincia" placeholder=" Seleccione la Provincia">
                 <option selected disabled value="">Seleccionar</option>
                 <option value="Buenos Aires">Buenos Aires</option>
                 <option value="Ciudad Autonoma de Buenos Aires">Ciudad Autonoma de Buenos Aires</option>
@@ -219,9 +222,9 @@
 
               <label for="Telefono">Telefono</label>
 
-              <input class="controls" type="text" name="numero" id="telefono" placeholder="Ingrese su Numero de Contacto" required>
+              <input class="controls" type="text" name="Tel.Contacto" id="telefono" placeholder="Ingrese su Numero de Contacto" required>
 
-          <textarea aria-placeholder="none" aria-controls="none" class="controls" id="mensaje" placeholder="Dejanos un Mensaje" required></textarea><br>
+          <textarea name="Mensaje"  aria-placeholder="none" aria-controls="none" class="controls" id="mensaje" placeholder="Dejanos un Mensaje" required></textarea><br>
           <input class="registrarse" type="submit" >
           <p id="my-form-status"></p>
 
