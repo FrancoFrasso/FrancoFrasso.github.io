@@ -140,8 +140,44 @@ function guardarPersona(event){
   }
   
   localStorage.setItem('persona', JSON.stringify(persona));
-  window.location.href="datos.html"
+//   window.location.href="datos.html"
+//formulario
+var form = document.getElementById("formulario");
+debugger;
+async function handleSubmit(event) {
+  event.preventDefault();
+  var status = document.getElementById("my-form-status");
+  var data = new FormData(event.target);
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+        'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      form.reset();
+      alert("Gracias por completar el formulario");
+      
+    } else {
+      response.json().then(data => {
+          status.innerHTML = "Hubo un problema al enviar su formulario"
+        }
+      )
+    }
+  }).catch(error => {
+    status.innerHTML = "Hubo un problema al enviar su formulario"
+  });
+}
+form.addEventListener("submit", handleSubmit)
+;
   }
+
+
+
+
+
+
 
 
 //SlideToggle con JQUERY
@@ -157,8 +193,3 @@ $(document).ready(function(){
         $(this).text("Cerrar");
     }
 });
-
-
-
-
-
